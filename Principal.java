@@ -14,7 +14,7 @@ public class Principal extends JFrame implements ActionListener {
     // Constructor de la ventana
     public Principal() {
         // Establecemos el título, el tamaño y el layout de la ventana
-        setTitle("Ventana con botones");
+        setTitle("Ventana de elecion");
         setSize(300, 100);
         setLayout(new FlowLayout());
 
