@@ -1,7 +1,6 @@
 package dulceria_gui;
 
 import java.util.ArrayList; // Importar la clase ArrayList para manejar listas dinámicas
-import java.util.Vector;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
