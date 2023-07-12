@@ -21,6 +21,7 @@ public class App {
         System.out.println("Elige una opción:"); 
         System.out.println("1. Vista Grafica"); 
         System.out.println("2. Vista Consola");
+        System.out.println(":");
         int opcion = sc.nextInt();
 
         if (opcion == 1) { 
