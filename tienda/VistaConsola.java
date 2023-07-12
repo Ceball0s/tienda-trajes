@@ -27,7 +27,7 @@ public class VistaConsola extends Vista{
 
     // Método para mostrar el menú de opciones
     public void mostrarMenu() {
-        System.out.println("Bienvenido a la Trajería");
+        System.out.println("Bienvenido a la Tienda de trajes");
         System.out.println("Seleccione una opción:");
         System.out.println("1. Agregar un Traje");
         System.out.println("2. Buscar un Traje");
