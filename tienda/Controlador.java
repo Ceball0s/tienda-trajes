@@ -71,4 +71,7 @@ public class Controlador {
         vista.actualizarLista(modelo.get_listaTrajes());
         return resultado;
     }
+    public void mostrar_lista(){
+        vista.actualizarLista(modelo.get_listaTrajes());
+    }
 }

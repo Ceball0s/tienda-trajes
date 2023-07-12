@@ -33,7 +33,8 @@ public class VistaConsola extends Vista{
         System.out.println("2. Buscar un Traje");
         System.out.println("3. Actualizar un Traje");
         System.out.println("4. Eliminar un Traje");
-        System.out.println("5. Salir");
+        System.out.println("5. Listar todos los trajes");
+        System.out.println("6. Salir");
         int opcion = scanner.nextInt(); // Leer la opción elegida por el usuario
         scanner.nextLine(); // Limpiar el buffer del scanner
         ejecutarOpcion(opcion); // Llamar al método para ejecutar la opción elegida
@@ -55,6 +56,9 @@ public class VistaConsola extends Vista{
                 eliminarTraje(); // Llamar al método para eliminar un Traje
                 break;
             case 5: // Si es salir
+                controlador.mostrar_lista();
+                break;
+            case 6:
                 setVisible(false); // Hacer invisible la consola
                 break;
             default: // Si es una opción inválida
@@ -130,18 +134,23 @@ public class VistaConsola extends Vista{
     // Método para actualizar la lista de Trajes con los datos del modelo 
     public void actualizarLista(ArrayList<Traje> listaTrajes) { 
         System.out.println("Lista de Trajes:"); 
-        for (Traje Traje : listaTrajes) { // Recorrer la lista de Trajes 
-           mostrarTraje(Traje);
-        } 
+        if (listaTrajes.size() != 0 ){
+            for (Traje Traje : listaTrajes) { // Recorrer la lista de Trajes 
+            mostrarTraje(Traje);
+            } 
+        }else{
+            mostrarMensaje("Lista vacia");
+        }
+
     }
 
     // Método para mostrar los datos de un Traje en los campos de texto 
-    public void mostrarTraje(Traje Traje) { 
+    public void mostrarTraje(Traje traje) { 
         System.out.println("Datos del Traje:"); 
-        System.out.println("Nombre: " + Traje.getNombre()); // Mostrar el nombre del Traje 
-        System.out.println("Pais: " + Traje.getPaisFabricacion()); // Mostrar el tipo del Traje
-        System.out.println("material: " + Traje.getMaterial()); // Mostrar el tipo del Traje
-        System.out.println("precio: " + Traje.getPrecio()); // Mostrar el tipo del Traje
+        System.out.println("Nombre: " + traje.getNombre()); // Mostrar el nombre del Traje 
+        System.out.println("Pais: " + traje.getPaisFabricacion()); // Mostrar el tipo del Traje
+        System.out.println("material: " + traje.getMaterial()); // Mostrar el tipo del Traje
+        System.out.println("precio: " + traje.getPrecio()); // Mostrar el tipo del Traje
 
     }
 
