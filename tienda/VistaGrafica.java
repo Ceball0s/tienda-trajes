@@ -1,4 +1,4 @@
-package dulceria_gui;
+package tienda;
 
 import java.awt.Color;
 import java.awt.Component;

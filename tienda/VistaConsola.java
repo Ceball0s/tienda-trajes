@@ -1,4 +1,4 @@
-package dulceria_gui;
+package tienda;
 import java.util.Scanner; // Importar la clase Scanner para leer datos desde la consola
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package dulceria_gui;
+package tienda;
 
 // Clase Controlador
 public class Controlador {

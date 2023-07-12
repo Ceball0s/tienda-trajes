@@ -1,4 +1,4 @@
-package dulceria_gui;
+package tienda;
 import java.util.ArrayList;
 public abstract class Vista {
 

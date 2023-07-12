@@ -2,15 +2,16 @@
 //import dulceria_gui.Dulce;
 //import dulceria_gui.Dulceria;
 //import dulceria_gui.controlador;
-import dulceria_gui.Controlador;
-import dulceria_gui.tienda;
-import dulceria_gui.VistaGrafica;
-import dulceria_gui.VistaConsola;
 import java.util.Scanner;
+
+
+import tienda.Controlador;
+import tienda.VistaConsola;
+import tienda.VistaGrafica;
+import tienda.tienda;
 //miguel angel ceballos 2259619-3743
 //Nicolás Gutiérrez Ramírez 2259515 
 //Camilo Valencia Romero 2259497 
-
 
 public class App {
     public static void main(String[] args) throws Exception {

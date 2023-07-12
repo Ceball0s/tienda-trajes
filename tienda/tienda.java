@@ -1,4 +1,4 @@
-package dulceria_gui;
+package tienda;
 
 import java.util.ArrayList; // Importar la clase ArrayList para manejar listas dinámicas
 
