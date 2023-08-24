@@ -1,0 +1,29 @@
+
+# https://parzibyte.me/blog
+import requests
+import time
+url = "https://sira.univalle.edu.co/sra/"
+respuesta = requests.get(url)
+cookie = str(respuesta.cookies)
+cookie = cookie[cookie.find("PHPSESSID"):cookie.find(" ",cookie.find("PHPSESSID")+2)]
+respuesta = requests.get(url+"/favicon.ico",cookies={cookie.split("=")[0]: cookie.split("=")[1]})
+
+datos = {
+    "redirect":"",
+    "usu_login_aut":"codigo",
+    "usu_password_aut":"contrasena",
+    "boton":"Ingresar+al+Sistema"
+}
+while True:
+    respuesta = requests.post(url,data=datos,cookies={cookie.split("=")[0]: cookie.split("=")[1]})
+    if "AVISO 300" in str(respuesta.content) :
+        print("no se pudo logear reintentando")
+    elif "incorrecta" in str(respuesta.content):
+        print("contraseña incorrecta")
+    else:
+        break
+    time.sleep(2)
+    
+with open("pagina.html","wb") as archivo:
+    archivo.write(respuesta.content)
+#print(respuesta.content)
